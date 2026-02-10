@@ -17,4 +17,4 @@ a ideia na prática antes de escalar funcionalidades.
 🧪 MVP em teste real com usuários
 
 ## Acesso
-(Link público será adicionado após deploy no Render)
+(https://projeto-azul-mvp.onrender.com)
