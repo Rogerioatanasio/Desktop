@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contratar profissional</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+
+<body>
+
+<header>
+    <h1>Quero contratar</h1>
+    <p>Encontre profissionais disponíveis na sua região</p>
+</header>
+
+<main>
+
+    <section>
+        <form method="get" action="{{ url_for('contratar') }}">
+            <label for="profissao">Filtrar por profissão:</label>
+            <select name="profissao" id="profissao" onchange="this.form.submit()">
+                <option value="">Todas</option>
+                {% for p in profissoes %}
+                    <option value="{{ p }}" {% if p == profissao_selecionada %}selected{% endif %}>
+                        {{ p }}
+                    </option>
+                {% endfor %}
+            </select>
+        </form>
+    </section>
+
+    <section>
+        <h2>Profissionais disponíveis</h2>
+
+        <div class="cards-container">
+            {% for t in trabalhadores %}
+                <div class="card-profissional">
+
+                    <div class="thumb">
+                        <span>Sem foto</span>
+                    </div>
+
+                    <div class="card-info">
+                       
+
+                        <h3>{{ t.nome }}</h3>
+
+                        <span class="badge-profissao">
+                            {{ t.profissao }}
+                        </span>
+
+                    
+                        <a 
+                            class="btn-whatsapp" 
+                            href="{{ t.whatsapp_link }}" 
+                            target="_blank"
+                        >
+                            Chamar no WhatsApp
+                        </a>
+                    </div>
+
+                </div>
+            {% endfor %}
+        </div>
+
+        {% if trabalhadores|length == 0 %}
+            <p class="empty-state">
+                Nenhum profissional encontrado para esse filtro 😕
+            </p>
+        {% endif %}
+    </section>
+
+    <a href="{{ url_for('home') }}">← Voltar para a Home</a>
+
+
+</main>
+
+<footer>
+    Projeto Azul • MVP em teste 🚀
+</footer>
+
+</body>
+</html>

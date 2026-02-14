@@ -1,0 +1,378 @@
+/* Reset básico */
+/* RESET */
+/* RESET BÁSICO */
+/* RESET BÁSICO */
+:root {
+  --azul: #1e88e5;
+  --laranja: #fb8c00;
+  --cinza-escuro: #ffffff;
+  ----cinza-escuro: #1f2937; /* cinza escuro de verdade */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cinza-claro);
+    color: var(--cinza-escuro);
+}
+
+/* HEADER */
+header {
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #ffffff;
+}
+
+/* CONTEÚDO */
+main {
+    padding: 20px;
+}
+
+/* FILTRO */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+select {
+    margin-top: 5px;
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+/* TÍTULO */
+h2 {
+    margin-bottom: 15px;
+}
+
+/* GRID DE CARDS */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+/* CARD */
+.card-profissional {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* THUMB (FOTO FAKE) */
+.thumb {
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(135deg, #eef2f7, #dfe6ed);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #666;
+}
+
+
+/* INFO */
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: #0f172a;
+}
+
+.card-info h3 {
+    margin: 0 0 6px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a; /* bem escuro */
+  line-height: 1.2;
+}
+
+/* BADGE PROFISSÃO */
+.badge-profissao {
+    background: #eef2ff;
+    color: #3f51b5;
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 12px;
+    width: fit-content;
+}
+
+/* BOTÃO WHATSAPP */
+.btn-whatsapp {
+    margin-top: 5px;
+    background: #25d366;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn-laranja {
+  background-color: var(--laranja);
+  color: white;
+  border: none;
+}
+
+.btn-laranja:hover {
+  opacity: 0.9;
+}
+
+
+.btn-whatsapp:hover {
+    background: #1ebe5d;
+}
+
+/* LINK VOLTAR */
+a {
+    display: inline-block;
+    margin-top: 25px;
+    color: #555;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+/* HOVER CARD */
+.card-profissional {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-profissional:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+/* HOVER FILTRO */
+select:hover {
+    border-color: #3f51b5;
+}
+
+/* CURSOR */
+.btn-whatsapp,
+select {
+    cursor: pointer;
+}
+/* ESTADO VAZIO */
+.empty-state {
+    background: #fff3f3;
+    border: 1px solid #ffd6d6;
+    color: #a94442;
+    padding: 12px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.thumb {
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(135deg, #eef2f7, #dfe6ed);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #666;
+}
+
+.hidden {
+    display: none;
+}
+
+.localizacao {
+    font-size: 12px;
+    color: #777;
+}
+
+.card-profissional:hover {
+    transform: translateY(-3px);
+    transition: 0.2s ease;
+}
+header {
+  background-color: var(--azul);
+  padding: 16px 24px;
+  color: white;
+}
+/* FILTRO - COR LARANJA */
+section form {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 6px solid #ff8c00;
+    margin-bottom: 20px;
+}
+
+section label {
+    font-weight: bold;
+    color: #555;
+}
+
+section select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+section select:focus {
+    outline: none;
+    border-color: #ff8c00;
+}
+/* ===== HOME ===== */
+
+.home-body {
+    background: linear-gradient(135deg, #0d6efd, #003f88);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.home-container {
+    text-align: center;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.home-title {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.home-subtitle {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+.home-cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.home-card {
+    background: white;
+    color: #333;
+    width: 260px;
+    padding: 30px;
+    border-radius: 14px;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.home-card h2 {
+    margin-bottom: 10px;
+}
+
+.home-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* HOVER */
+.home-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+}
+
+/* IDENTIDADE */
+.home-card.trabalhar {
+    border-top: 6px solid #ff8c00;
+}
+
+.home-card.contratar {
+    border-top: 6px solid #0d6efd;
+}
+/* ===== AJUSTE FUNDO GERAL ===== */
+body {
+    background: #f4f6f8;
+}
+
+/* ===== ÁREA PRINCIPAL ===== */
+main {
+    background: #f4f6f8;
+    padding-bottom: 40px;
+}
+
+/* ===== TÍTULO DA LISTA ===== */
+h2 {
+    color: #333;
+}
+
+/* ===== FOOTER SIMPLES ===== */
+footer {
+    background: #ff8c00;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-weight: bold;
+}
+/* ===== HEADER (TOPO AZUL) ===== */
+header {
+    background: #1f4fd8;
+    color: white;
+    padding: 30px 20px;
+}
+
+/* ===== TEXTO DO HEADER ===== */
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin-top: 8px;
+    opacity: 0.9;
+}
+
+/* ===== ÁREA CENTRAL ===== */
+main {
+    background: #f4f6f8;
+    padding: 30px 20px 60px;
+    min-height: 70vh;
+}
+
+/* ===== RODAPÉ (LARANJA) ===== */
+footer {
+    background: #ff8c00;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-weight: bold;
+}

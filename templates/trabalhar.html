@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Quero Trabalhar - Projeto Azul</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #3974cc, #306eb9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            width: 350px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 8px;
+            color: #216cdd;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 14px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #0d6efd;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #ff8c00;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background: #e67e00;
+            transform: translateY(-2px);
+        }
+
+        .voltar {
+            margin-top: 18px;
+        }
+
+        .voltar a {
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .voltar a:hover {
+            color: #0d6efd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Quero Trabalhar</h1>
+        <div class="subtitle">
+            Cadastre seu serviço e apareça para quem precisa
+        </div>
+
+        <form method="POST">
+            <input type="text" name="nome" placeholder="Nome completo" required>
+            <select name="profissao" required>
+    <option value="">Selecione sua profissão</option>
+    <option>Pedreiro</option>
+    <option>Eletricista</option>
+    <option>Encanador</option>
+    <option>Pintor</option>
+    <option>Faxineira</option>
+    <option>Ajudante Geral</option>
+</select>
+
+            <input type="text" name="whatsapp" placeholder="Telefone / WhatsApp" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <div class="voltar">
+            <a href="/">← Voltar para Home</a>
+        </div>
+    </div>
+
+</body>
+</html>
